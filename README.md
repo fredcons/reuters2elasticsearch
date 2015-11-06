@@ -8,11 +8,11 @@ The hpricot gem should be installed
 
 ## Usage
 
-- Put the reuters dataset .grm files in the same folder than this script
+- Put the reuters dataset .sgm files in the same folder than this script
 - Run 
 
 ```
-ruby generate_es_bulk.rb
+ruby reuters2elasticsearch.rb
 ```
 
 The folder now contains a `reuters.bulk.json` file that is ready to be bulk-imported in ElasticSearch, with for example : 
