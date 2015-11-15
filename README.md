@@ -4,8 +4,8 @@ They rely mostly on [this original script](http://earlh.com/blog/2011/06/18/prep
 
 ## Prequisites
 
-The (now defunct) hpricot gem should be installed
-Put the reuters dataset .sgm files in the same folder than this project
+- The (now defunct) hpricot gem should be installed
+- Put the reuters dataset .sgm files in the same folder than this project
 
 ## Usage : reuters2elasticsearch
 
