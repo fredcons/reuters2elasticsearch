@@ -5,12 +5,9 @@ They rely mostly on [this original script](http://earlh.com/blog/2011/06/18/prep
 ## Prequisites
 
 The (now defunct) hpricot gem should be installed
+Put the reuters dataset .sgm files in the same folder than this project
 
-## Usage
-
-- Put the reuters dataset .sgm files in the same folder than this project
-
-## reuters2elasticsearch
+## Usage : reuters2elasticsearch
 
 ```
 ruby reuters2elasticsearch.rb
@@ -54,7 +51,7 @@ curl -XPUT http://localhost:9200/reuters/articles/_bulk --data-binary @reuters.b
 curl -XGET http://localhost:9200/reuters/articles/_count
 ```
 
-## reuters2folder
+## Usage : reuters2folder
 
 ```
 ruby reuters2folder.rb
