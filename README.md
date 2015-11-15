@@ -1,15 +1,16 @@
-A small utility script to transform the original reuters news dataset into a bulk elasticsearch import
+Utility scripts to transform the original reuters news dataset into various forms
 
-It relies mostly on [this original script](http://earlh.com/blog/2011/06/18/prepping-the-reuters-21578-classification-sample-dataset/), with title extraction and bulk file generation added.
+They rely mostly on [this original script](http://earlh.com/blog/2011/06/18/prepping-the-reuters-21578-classification-sample-dataset/).
 
 ## Prequisites
 
-The hpricot gem should be installed
+The (now defunct) hpricot gem should be installed
 
 ## Usage
 
-- Put the reuters dataset .sgm files in the same folder than this script
-- Run 
+- Put the reuters dataset .sgm files in the same folder than this project
+
+## reuters2elasticsearch
 
 ```
 ruby reuters2elasticsearch.rb
@@ -53,3 +54,24 @@ curl -XPUT http://localhost:9200/reuters/articles/_bulk --data-binary @reuters.b
 curl -XGET http://localhost:9200/reuters/articles/_count
 ```
 
+## reuters2folder
+
+```
+ruby reuters2folder.rb
+```
+
+The folder now contains a `reuters.dir` folder that itself contains one folder per original sgm file, each of them containg text versions of the articles.
+
+```
+$ tree reuters.dir
+reuters.dir
+├── reut2-000.sgm
+│   ├── 1000.txt
+│   ├── 100.txt
+│   ├── 101.txt
+│   ├── 102.txt
+│   ├── 103.txt
+│   ├── 104.txt
+│   ├── 105.txt
+...
+```
